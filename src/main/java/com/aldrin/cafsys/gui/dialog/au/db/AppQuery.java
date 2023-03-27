@@ -210,7 +210,7 @@ public class AppQuery {
             c.getDBConn();
             java.sql.PreparedStatement ps = c.getCon().prepareStatement("UPDATE  `user`  SET  `password` = ?    WHERE `id` = ? ;");
             ps.setString(1, password);
-            ps.setInt(2, new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getId());
+//            ps.setInt(2, new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getId());
             ps.execute();
             ps.close();
             c.closeConnection();
@@ -778,7 +778,7 @@ public class AppQuery {
                 String passwordl = rs.getString("password");
                 login = true;
                 com.aldrin.cafsys.model.User user = new com.aldrin.cafsys.model.User(id, firstname, middlenamel, lastname, usernamel, password);
-                new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().setUser(user);
+//                new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().setUser(user);
             }
             c.closeConnection();
         } catch (Exception e2) {
@@ -799,7 +799,7 @@ public class AppQuery {
                     + ") \n"
                     + "VALUES\n"
                     + "  (?,?,?,?) ;");
-            ps.setInt(1, new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getId());
+//            ps.setInt(1, new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getId());
             ps.setDouble(2, invoice.getCustomerCash());
             ps.setInt(3, invoice.getTableNo());
             ps.setInt(4, invoice.getTakingMealsId());

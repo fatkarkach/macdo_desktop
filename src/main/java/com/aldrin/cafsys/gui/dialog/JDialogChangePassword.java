@@ -32,7 +32,7 @@ public class JDialogChangePassword extends javax.swing.JDialog {
     public JDialogChangePassword(com.aldrin.cafsys.gui.JFrameCafSys parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        JTextFieldUsername.setText(new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getUsername());
+//        JTextFieldUsername.setText(new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getUsername());
         jButtonSave.setEnabled(false);
     }
 
@@ -567,36 +567,36 @@ public class JDialogChangePassword extends javax.swing.JDialog {
 
     private void checkOldPassword() {
         try {
-            if (jPasswordFieldFrontOldPassword.getText().equals(new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getPassword())) {
-                //color green
-                jPasswordFieldFrontOldPassword.setForeground(new Color(0, 102, 51));
-                jLabelMessage.setText("");
-            } else {
-                //color red
-                jPasswordFieldFrontConfirmNewPassword.setForeground(new Color(102, 0, 0));
-                jLabelMessage.setText("Old password did not match");
-                setError(true);
-                jButtonSave.setEnabled(false);
-                return;
-            }
-            if (jPasswordFieldFrontNewPassword.getText().equals(jPasswordFieldFrontConfirmNewPassword.getText().toString())) {
-                //color green
-                jPasswordFieldFrontOldPassword.setForeground(new Color(0, 102, 51));
-                jLabelMessage.setText("");
-                jButtonSave.setEnabled(true);
-                setError(false);
-
-            } else {
-                //color red
-                jPasswordFieldFrontConfirmNewPassword.setForeground(new Color(102, 0, 0));
-                if (jPasswordFieldFrontNewPassword.getText().equals("")) {
-
-                } else {
-                    jButtonSave.setEnabled(false);
-                    setError(true);
-                    jLabelMessage.setText("Error confirm password");
-                }
-            }
+//            if (jPasswordFieldFrontOldPassword.getText().equals(new com.aldrin.cafsys.gui.dialog.au.db.LoginUser().getUser().getPassword())) {
+//                //color green
+//                jPasswordFieldFrontOldPassword.setForeground(new Color(0, 102, 51));
+//                jLabelMessage.setText("");
+//            } else {
+//                //color red
+//                jPasswordFieldFrontConfirmNewPassword.setForeground(new Color(102, 0, 0));
+//                jLabelMessage.setText("Old password did not match");
+//                setError(true);
+//                jButtonSave.setEnabled(false);
+//                return;
+//            }
+//            if (jPasswordFieldFrontNewPassword.getText().equals(jPasswordFieldFrontConfirmNewPassword.getText().toString())) {
+//                //color green
+//                jPasswordFieldFrontOldPassword.setForeground(new Color(0, 102, 51));
+//                jLabelMessage.setText("");
+//                jButtonSave.setEnabled(true);
+//                setError(false);
+//
+//            } else {
+//                //color red
+//                jPasswordFieldFrontConfirmNewPassword.setForeground(new Color(102, 0, 0));
+//                if (jPasswordFieldFrontNewPassword.getText().equals("")) {
+//
+//                } else {
+//                    jButtonSave.setEnabled(false);
+//                    setError(true);
+//                    jLabelMessage.setText("Error confirm password");
+//                }
+//            }
 
         } catch (Exception e) {
             e.printStackTrace();

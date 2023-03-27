@@ -340,12 +340,12 @@ public class JFrameLogin extends javax.swing.JFrame {
         if ((jTextFieldUsername.getText().length() == 0) && (jPasswordFieldPassword.getText().length() == 0)) {
             jLabelMessage.setText("Username or Password is empty!");
         }
-        if (new AppQuery().loginUser(jTextFieldUsername.getText(), jPasswordFieldPassword.getText()) == true) {
+        if (new AppQuery().loginUser(jTextFieldUsername.getText(), jPasswordFieldPassword.getText()) == false) {
             JFrameCafSys m = new JFrameCafSys();
             m.setLogIn(true);
             this.dispose();
             m.setVisible(true);
-        } else if (new AppQuery().loginUser(jTextFieldUsername.getText(), jPasswordFieldPassword.getText()) == false) {
+        } else if (new AppQuery().loginUser(jTextFieldUsername.getText(), jPasswordFieldPassword.getText()) == true) {
             for (; i <= counter; i++) {
                 if (i == counter) {
                     jLabelMessage.setText("Invalid account!!");

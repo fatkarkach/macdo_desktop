@@ -18,16 +18,16 @@ public class LoginUser {
     /**
      * @return the user
      */
-    public static com.aldrin.cafsys.model.User getUser() {
-        return user;
-    }
-
-    /**
-     * @param aUser the user to set
-     */
-    public static void setUser(com.aldrin.cafsys.model.User aUser) {
-        user = aUser;
-    }
+//    public static com.aldrin.cafsys.model.User getUser() {
+//        return user;
+//    }
+//
+//    /**
+//     * @param aUser the user to set
+//     */
+//    public static void setUser(com.aldrin.cafsys.model.User aUser) {
+//        user = aUser;
+//    }
 
    
 

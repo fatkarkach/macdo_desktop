@@ -292,7 +292,7 @@ public class JFrameCafSys extends javax.swing.JFrame {
         int response = JOptionPane.showConfirmDialog(this, "Are you sure to log-out?", "Confirmation", JOptionPane.YES_NO_OPTION);
         if (response == JOptionPane.YES_OPTION) {
             setLogIn(false);
-            new LoginUser().setUser(null);
+//            new LoginUser().setUser(null);
         }
         if (isLogIn() == true) {
             logIn();
@@ -398,7 +398,7 @@ public class JFrameCafSys extends javax.swing.JFrame {
         jMenuItemLogIN.setVisible(false);
         jMenuItemChangePassword.setVisible(true);
         jMenuItemLogOut.setVisible(true);
-        jMenuUser.setText(new LoginUser().getUser().getFirstname() + " " + new LoginUser().getUser().getMiddlename().substring(0, 1) + ". " + new LoginUser().getUser().getLastname());
+//        jMenuUser.setText(new LoginUser().getUser().getFirstname() + " " + new LoginUser().getUser().getMiddlename().substring(0, 1) + ". " + new LoginUser().getUser().getLastname());
         panelCashier.logIn();
     }
 
